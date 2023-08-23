@@ -1,0 +1,16 @@
+[
+    {
+        "year": 2022,
+        "origin": 1,
+        "firstHand": 0,
+        "mileage": 20,
+        "energy": 0,
+        "gearbox": 1,
+        "doors": 4,
+        "ratedHorsePower": 10,
+        "powerDIN": 190,
+        "critAir": 2,
+        "co2": 132,
+        "owners": 2.0
+    }
+]
