@@ -17,16 +17,14 @@ def MLP_prediction(data_dict):
 
     X = pd.DataFrame(data_dict)
 
-    # test prediction
+    # Prediction
     scaler = MinMaxScaler()
     scaler.fit(X)
     X_test = scaler.transform(X)
     y_predict = loaded_model.predict(X_test)
 
-    # Create response
-    class Response:
-        data_send = data_dict
-        prediction_price = y_predict
-
-    response = Response()
+    response = {
+        "data": data_dict,
+        "prediction_price" : y_predict[0]
+    }   
     return response
