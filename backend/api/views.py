@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 import json
 from .MLP_prediction import MLP_prediction
+from .query_mongodb import query_all_brands
 
 
 def index(request):
@@ -18,3 +19,9 @@ def predict_price(request):
     data_predicted = MLP_prediction(data_dict)
 
     return JsonResponse(data_predicted)
+
+def get_data(request):
+    data = query_all_brands()
+    print(data)
+
+    return HttpResponse(data)
