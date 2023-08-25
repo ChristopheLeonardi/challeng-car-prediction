@@ -2,26 +2,21 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 import json
 from .MLP_prediction import MLP_prediction
-from .query_mongodb import query_all_brands
+from .query_mongodb import query_all_brands, get_model_description
 
-
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
-
-"""
-dummy data argument url 
-q=[{"year":2022,"origin":1,"firstHand":0,"mileage":20,"energy":0,"gearbox":1,"doors":4,"ratedHorsePower":10,"powerDIN":190,"critAir":2,"co2":132,"owners":2.0}]
-"""
 
 def predict_price(request):
     query = request.GET.get("q", "")
     data_dict = json.loads(query)
+    print(data_dict)
     data_predicted = MLP_prediction(data_dict)
-
     return JsonResponse(data_predicted)
 
 def get_data(request):
     data = query_all_brands()
-    print(data)
+    return JsonResponse(data, safe=False)
 
-    return HttpResponse(data)
+def get_description(request):
+    query = request.GET.get("q", "")
+    data = get_model_description(query)
+    return JsonResponse(data, safe=False)

@@ -42,7 +42,7 @@ class Cars(models.Model):
     critAir = models.CharField(max_length=5)
     co2 = models.CharField(max_length=10)
     marqueModele = models.CharField(max_length=50)
-    owners = models.FloatField(null=True)
+    owners = models.CharField(max_length=5)
 
     class Meta:
         db_table = 'Cars'

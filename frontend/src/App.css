@@ -37,3 +37,107 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: #f5f5f5;
+}
+#root{
+  background-color: #fff;
+  width: 90vw;
+  margin: 2em auto;
+  border-radius: 16px;
+  padding: 1em;
+}
+
+h1{
+  text-align: center;
+}
+
+header p{
+  text-align: center;
+}
+.label{
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 1em;
+  width: 300px;
+  margin: auto;
+}
+.label label{
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.label div{
+  margin: auto;
+}
+.list-energy,
+input{
+  padding: 0.5em;
+  border-radius: 16px;
+  margin-top: 0.5em;
+  width: 80%;
+  border: 1px solid #B6E7F5;
+}
+
+#submit-form,
+.label button{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border: 1px solid #B6E7F5;
+  background-color: #B6E7F5;
+}
+#submit-form{
+  width: fit-content;
+  border-radius: 16px;
+  padding: 0.5em 1em;
+  margin: 2em auto;
+  cursor: pointer;
+}
+.combobox{
+  width: 300px;
+  margin: 0.5em auto;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+  padding: 1em;
+}
+.combobox li{
+  list-style-type: none;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 16px;
+}
+.combobox.hidden{
+  display: none;
+}
+.combobox li:hover{
+  background-color: #B6E7F5;
+}
+form .form-entries{
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em auto;
+
+}
+.form-entries .element{
+  margin-bottom: 0.5em;
+  height: 50px;
+}
+.form-entries .element label{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-entries .element input{
+  width: 30%;
+}
+#predicted_price{
+  text-align: center;
+}
